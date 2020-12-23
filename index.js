@@ -1,15 +1,8 @@
-/* const express=require('express');
-const app=express();
-const PORT=process.env.PORT || 3001;
-const dbconnect = require('./config/dbconnect');
-dbconnect();
-app.listen(PORT, ()=> console.log('>>>SERVER ONLINE')); */
-
-// importar módulos
+// Modules Imports
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors=require('./middleware/cors');
 
-//Modular imports
 const {showUsers, logoutUser} = require('./db/users');
 const {showUsersId} = require('./db/users');
 const {registerUser} = require('./db/users');
@@ -34,6 +27,9 @@ app.use(
 app.use(bodyParser.json());
 
 //Middleware
+app.use(cors);
+app.use(express.json());
+app.options('/*', (req, res) => res.send());
 
 //User actions
 app.get('/users/showAll', showUsers);
