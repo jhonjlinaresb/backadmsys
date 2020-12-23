@@ -1,7 +1,7 @@
-import { Schema, model } from 'mongoose';
+const mongoose = require('mongoose');
 //const bcrypt = require('bcryptjs');
 //const jwt = require ('jsonwebtoken');
-const UserSchema = new Schema({
+const UserSchema = new mongoose.Schema({
     name: String,
     email: {
         type: String,
@@ -53,5 +53,5 @@ UserSchema.methods.generateAuthToken = function() {
     const token = jwt.sign({ _id: user._id }, 'mipapamemimamucho', { expiresIn: '2y' });
     return token;
 }
-const UserModel = model('user', UserSchema);
-export default UserModel;
+const UserModel = mongoose.model('user', UserSchema);
+module.exports = UserModel;
