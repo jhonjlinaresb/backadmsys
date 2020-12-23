@@ -1,7 +1,7 @@
 const TicketModel = require('../models/tickets');
 const adduserTicket = async (req, res)  => {
         console.log(req.body);
-        const ticket = await TickettModel({
+        const ticket = await TicketModel({
             status: req.body.status,
             date: req.body.date,
             observations: req.body.observations,
