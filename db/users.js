@@ -1,7 +1,7 @@
 const UserModel=require('../models/users');
-//const jwt=require('jsonwebtoken');
+const jwt=require('jsonwebtoken');
 const mongoose=require('mongoose');
-//const bcrypt = require("bcryptjs");
+const bcrypt = require("bcryptjs");
 const fs=require('fs');
 
 const showUsers = (req, res) => {
