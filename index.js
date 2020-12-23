@@ -40,8 +40,8 @@ app.get('/users/showAll', showUsers);
 app.get('/users/id/:userId', showUsersId);
 app.get('/users/:dni/tickets', userTickets);
 
-app.post('/users/register', registerUser); //Ya 
-app.post('/users/login', loginUser); //Ya
+app.post('/users/register', registerUser); 
+app.post('/users/login', loginUser); 
 app.post('/users/logout', logoutUser);
 app.post('/users/:dni/tickets', adduserTicket);
 
