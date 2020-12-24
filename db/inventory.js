@@ -20,7 +20,7 @@ const addComputer = async (req, res)  => {
         res.status(201).send(computer);
     }
 
-    const deleteOne = async (req, res)  => {
+    const deleteComputer = async (req, res)  => {
         try {
              //await TicketModel.findOneAndDelete({dni:req.params.dni})
              await InventoryModel.findOneAndDelete(req.params.ObjectId);
@@ -54,5 +54,5 @@ const addComputer = async (req, res)  => {
     }
 
 module.exports = {addComputer, 
-                  deleteOne,
+                  deleteComputer,
                   computers};

@@ -10,6 +10,7 @@ const {deleteUser} = require('./db/users');
 const {modifyUser} = require('./db/users');
 const {loginUser} = require('./db/users');
 const {userTickets, adduserTicket, deleteOne} = require('./db/tickets');
+const {computers, addComputer, deleteComputer} = require('./db/inventory');
 
 // Llamar conexión
 const dbconnect = require('./config/dbconnect');
@@ -46,6 +47,11 @@ app.delete('/users/delete', deleteUser);
 app.delete('/users/tickets', deleteOne);
 
 app.put('/users/modify', modifyUser);
+
+//Inventory Actions
+app.get('/inventory', computers);
+app.post('/inventory', addComputer);
+app.delete('/inventory', deleteOne)
 
 // Crear puerto de salida para el server
 const port = process.env.port || 8080;
