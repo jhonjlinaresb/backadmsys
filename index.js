@@ -49,8 +49,8 @@ app.delete('/users/tickets', deleteOne);
 app.put('/users/modify', modifyUser);
 
 //Inventory Actions
-app.get('/inventory', computers);
-app.post('/inventory', addComputer);
+app.get('/:user/inventory', computers);
+app.post('/:user/inventory', addComputer);
 app.delete('/:user/inventory', deleteComputer);
 
 // Crear puerto de salida para el server
