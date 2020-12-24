@@ -51,7 +51,7 @@ app.put('/users/modify', modifyUser);
 //Inventory Actions
 app.get('/inventory', computers);
 app.post('/inventory', addComputer);
-app.delete('/inventory', deleteOne)
+app.delete('/:user/inventory', deleteComputer);
 
 // Crear puerto de salida para el server
 const port = process.env.port || 8080;

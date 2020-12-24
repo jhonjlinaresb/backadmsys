@@ -2,7 +2,7 @@ const InventoryModel = require('../models/inventory');
 const addComputer = async (req, res)  => {
         console.log(req.body);
         const computer = await InventoryModel({
-            status: req.true.status,
+            status: req.body.status,
             date: req.body.date,
             observations: req.body.observations,
             text: req.body.text,
@@ -15,7 +15,7 @@ const addComputer = async (req, res)  => {
             disk: req.body.disk,
             price: req.body.price,
             hdv: req.body.hdv,
-            user: req.params.user
+            //user: req.params.user
         }).save();
         res.status(201).send(computer);
     }
@@ -39,7 +39,8 @@ const addComputer = async (req, res)  => {
     const computers = async (req, res) => {
         try {
             const computer = await InventoryModel.find({
-                user: req.params.user
+                //user: req.params.user
+                model: req.body.model
             })
             res.send({
                 computer
