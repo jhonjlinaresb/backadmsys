@@ -51,6 +51,9 @@ const InventorySchema = mongoose.Schema({
     text: {
         type: String,
         required: true
+    },
+    hdv: {
+        type: Object,
     }
 })
 
