@@ -4,6 +4,7 @@ const adduserTicket = async (req, res)  => {
         const ticket = await TicketModel({
             status: req.body.status,
             date: req.body.date,
+            hour: req.body.date,
             observations: req.body.observations,
             text: req.body.text,
             dni: req.params.dni

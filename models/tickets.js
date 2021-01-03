@@ -1,3 +1,4 @@
+const { Timestamp } = require('mongodb');
 const mongoose = require('mongoose');
 
 const TicketSchema = mongoose.Schema({
@@ -8,6 +9,10 @@ const TicketSchema = mongoose.Schema({
     date: {
         type: Date,
         required: [true, 'Required field']
+    },
+    hour: {
+        type: Date,
+        require: [true, 'Required field']
     },
     observations: {
         type: String
