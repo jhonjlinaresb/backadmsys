@@ -4,7 +4,7 @@ const adduserTicket = async (req, res)  => {
         const ticket = await TicketModel({
             status: req.body.status,
             date: req.body.date,
-            hour: req.body.date,
+            hour: req.body.hour,
             observations: req.body.observations,
             text: req.body.text,
             dni: req.params.dni
@@ -14,7 +14,7 @@ const adduserTicket = async (req, res)  => {
 
     const deleteOne = async (req, res)  => {
         try {
-             await TicketModel.findOneAndDelete(req.params.dni);
+             await TicketModel.findByIdAndRemove(req.params._id);
              //await TicketModel.findOneAndDelete(req.params.ObjectId);
             res.send({
                 message: 'Delete Ticket',

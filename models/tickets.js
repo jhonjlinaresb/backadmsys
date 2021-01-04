@@ -11,7 +11,7 @@ const TicketSchema = mongoose.Schema({
         required: [true, 'Required field']
     },
     hour: {
-        type: Date,
+        type: String,
         require: [true, 'Required field']
     },
     observations: {
