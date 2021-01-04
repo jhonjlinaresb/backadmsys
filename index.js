@@ -43,8 +43,8 @@ app.post('/users/logout', logoutUser);
 app.post('/users/:dni/tickets', adduserTicket);
 
 app.delete('/users/delete', deleteUser);
-//app.delete('/users/:dni/tickets', deleteOne);
-app.delete('/users/tickets', deleteOne);
+app.delete('/users/:dni/tickets', deleteOne);
+//app.delete('/users/tickets', deleteOne);
 
 app.put('/users/modify', modifyUser);
 

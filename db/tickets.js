@@ -14,8 +14,8 @@ const adduserTicket = async (req, res)  => {
 
     const deleteOne = async (req, res)  => {
         try {
-             //await TicketModel.findOneAndDelete({dni:req.params.dni})
-             await TicketModel.findOneAndDelete(req.params.ObjectId);
+             await TicketModel.findOneAndDelete(req.params.dni);
+             //await TicketModel.findOneAndDelete(req.params.ObjectId);
             res.send({
                 message: 'Delete Ticket',
             })
