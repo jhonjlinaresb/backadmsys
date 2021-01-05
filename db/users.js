@@ -58,7 +58,7 @@ const registerUser = async (req, res) => {
     try {
 		
         const user = await new UserModel({
-		    username: bodyData.username,
+		    name: bodyData.name,
 		    email: bodyData.email,
             password: hashPass,
             dni:bodyData.dni
