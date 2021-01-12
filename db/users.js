@@ -18,9 +18,9 @@ const showUsers = (req, res) => {
 
 const showUsersId = (req, res) => {
      
-    let idJhon = req.params.userId;
+    let idUser = req.params.userId;
     //we show all users
-    UserModel.findOne({id:idJhon})
+    UserModel.findOne({id:idUser})
     .then(users=>{
         res.send(users)
     })
@@ -61,6 +61,7 @@ const registerUser = async (req, res) => {
 		    name: bodyData.name,
 		    email: bodyData.email,
             password: hashPass,
+            token: localStorage().token,
             dni:bodyData.dni
         }).
         save();
