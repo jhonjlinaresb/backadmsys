@@ -9,7 +9,7 @@ const {registerUser} = require('./db/users');
 const {deleteUser} = require('./db/users');
 const {modifyUser} = require('./db/users');
 const {loginUser} = require('./db/users');
-const {userTickets, adduserTicket, deleteOne} = require('./db/tickets');
+const {userTickets, adduserTicket, showTickets, deleteOne} = require('./db/tickets');
 const {computers, addComputer, deleteComputer} = require('./db/inventory');
 
 // Llamar conexión
@@ -36,6 +36,7 @@ app.options('/*', (req, res) => res.send());
 app.get('/users/showAll', showUsers);
 app.get('/users/id/:userId', showUsersId);
 app.get('/users/:dni/tickets', userTickets);
+app.get('/users/tickets', showTickets);
 
 app.post('/users/register', registerUser); 
 app.post('/users/login', loginUser); 
@@ -44,7 +45,7 @@ app.post('/users/:dni/tickets', adduserTicket);
 
 app.delete('/users/delete', deleteUser);
 //app.delete('/users/:dni/tickets', deleteOne);
-app.delete('/users/tickets/:ObjectId', deleteOne);
+app.delete('/users/tickets/:_id', deleteOne);
 //app.delete('/users/tickets', deleteOne);
 
 app.put('/users/modify', modifyUser);

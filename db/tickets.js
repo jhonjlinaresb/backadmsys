@@ -14,7 +14,7 @@ const adduserTicket = async (req, res)  => {
 
     const deleteOne = async (req, res)  => {
         try {
-             await TicketModel.findByIdAndDelete(req.params.ObjectId);
+             await TicketModel.findByIdAndDelete(req.params.id);
              //await TicketModel.findOneAndDelete(req.params.ObjectId);
             res.send({
                 message: 'Delete Ticket',
@@ -27,6 +27,18 @@ const adduserTicket = async (req, res)  => {
             
         }
     }
+
+    const showTickets = (req, res) => {
+     
+    
+        //we show all tickets
+        TicketModel.find({})
+        .then(tickets=>{
+            res.send(tickets)
+        })
+        .catch(error=>console.log(error))
+    
+        }
 
     const userTickets = async (req, res) => {
         try {
@@ -47,4 +59,5 @@ const adduserTicket = async (req, res)  => {
 
 module.exports = {adduserTicket, 
                   deleteOne,
+                  showTickets,
                   userTickets};
