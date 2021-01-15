@@ -15,15 +15,14 @@ const addComputer = async (req, res)  => {
             disk: req.body.disk,
             price: req.body.price,
             hdv: req.body.hdv,
-            user: req.params.user
+            user: req.body.user
         }).save();
         res.status(201).send(computer);
     }
 
     const deleteComputer = async (req, res)  => {
         try {
-             //await TicketModel.findOneAndDelete({dni:req.params.dni})
-             await InventoryModel.findOneAndDelete(req.params.ObjectId);
+             await InventoryModel.findByIdAndDelete(req.params._id);
             res.send({
                 message: 'Delete Computer',
             })
@@ -38,8 +37,8 @@ const addComputer = async (req, res)  => {
 
     const computers = async (req, res) => {
         try {
-            const computer = await InventoryModel.find({
-                user: req.params.user
+            const computer = await InventoryModel.findById({
+                _id: req.params._id
                 //model: req.body.model
             })
             res.send({
@@ -54,6 +53,18 @@ const addComputer = async (req, res)  => {
         }
     }
 
+    const showInventory = (req, res) => {
+     
+        //we show all computers
+        InventoryModel.find({})
+        .then(inventories=>{
+            res.send(inventories)
+        })
+        .catch(error=>console.log(error))
+    
+        }
+
 module.exports = {addComputer, 
                   deleteComputer,
-                  computers};
+                  computers,
+                  showInventory};
