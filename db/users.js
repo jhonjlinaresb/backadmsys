@@ -61,7 +61,6 @@ const registerUser = async (req, res) => {
 		    name: bodyData.name,
 		    email: bodyData.email,
             password: hashPass,
-            token: localStorage().token,
             dni:bodyData.dni
         }).
         save();
