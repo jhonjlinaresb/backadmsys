@@ -3,6 +3,7 @@ const jwt=require('jsonwebtoken');
 const mongoose=require('mongoose');
 const bcrypt = require("bcryptjs");
 const fs=require('fs');
+const { ObjectId } = require('mongodb');
 
 const showUsers = (req, res) => {
      
@@ -96,10 +97,10 @@ const registerUser = async (req, res) => {
 
 const deleteUser = async (req, res) => {
     
-    let id = req.body.id;
+    let id = ObjectId._id;
 
 	UserModel.findByIdAndDelete(
-		id
+		req.params.id
 	).then ( (borradoExitosamente) => {
 		
 		if (borradoExitosamente) {

@@ -53,6 +53,37 @@ const addComputer = async (req, res)  => {
         }
     }
 
+    const modifyComputer = async (req, res) => {
+        InventoryModel.findByIdAndUpdate(req.body._id,
+            {   status: req.body.status,
+                date: req.body.date,
+                observations: req.body.observations,
+                text: req.body.text,
+                mark: req.body.mark,
+                model: req.body.model,
+                serial: req.body.serial,
+                so: req.body.so,
+                ram: req.body.ram,
+                processor: req.body.processor,
+                disk: req.body.disk,
+                price: req.body.price,
+                hdv: req.body.hdv,
+                user: req.body.user}, {new:true, useFindAndModify:false})
+        .then( (computer) => {
+    
+            if(computer){
+    
+                if(computer){
+                    //then positively computer was found and updated.
+                    res.send(computer);
+                }else{
+                    res.send({"message": "Oops! there was an error updating the changes."})
+                }
+                
+            }
+        }).catch (err => console.log(err));
+    }
+
     const showInventory = (req, res) => {
      
         //we show all computers
@@ -67,4 +98,5 @@ const addComputer = async (req, res)  => {
 module.exports = {addComputer, 
                   deleteComputer,
                   computers,
+                  modifyComputer,
                   showInventory};
