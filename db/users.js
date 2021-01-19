@@ -120,8 +120,8 @@ const deleteUser = async (req, res) => {
 }
 
 const modifyUser = async (req, res) => {
-    UserModel.findByIdAndUpdate(req.body.id,
-        {username: req.body.username, password: req.body.password}, {new:true, useFindAndModify:false})
+    UserModel.findByIdAndUpdate(req.params.id,
+        {email: req.body.email, password: req.body.password, name: req.body.name, dni: req.body.dni}, {new:true, useFindAndModify:true})
     .then( (user) => {
 
         if(user){

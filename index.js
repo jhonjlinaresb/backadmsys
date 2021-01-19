@@ -47,8 +47,10 @@ app.delete('/users/delete/:id', deleteUser);
 //app.delete('/users/:dni/tickets', deleteOne);
 app.delete('/users/tickets/:_id', deleteOne);
 //app.delete('/users/tickets', deleteOne);
+app.post('/users/modify/:id', modifyUser);
 
-app.put('/users/modify', modifyUser);
+app.put('/users/modify/:id', modifyUser);
+app.patch('/users/modify/:id', modifyUser);
 
 //Inventory Actions
 app.get('/:user/inventory', computers);
