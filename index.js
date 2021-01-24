@@ -19,6 +19,9 @@ dbconnect();
 // Llamar express
 const app = express();
 
+// Crear puerto de salida para el server    
+const PORT = process.env.PORT || 8080;
+
 // Convierte peticiones a JSON
 app.use(
     bodyParser.urlencoded({
@@ -59,13 +62,12 @@ app.post('/:user/inventory', addComputer);
 app.delete('/inventory/:_id', deleteComputer);
 //app.delete('/:user/inventory', deleteComputer);
 
-// Crear puerto de salida para el server
-const port = process.env.port || 8080;
+
 
 // Se envía mensaje para probar respuesta del servidor
 app.get('/',(req, res) => res.send('Server Online'));
 
 // Escucha nuestro servidor
-app.listen(port, () =>{
-    console.log(`Express running on: http://localhost:${port}`);
+app.listen(PORT, () =>{
+    console.log(`Server Online Succesfully`);
 });
