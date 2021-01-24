@@ -1,7 +1,7 @@
 'use strict';
 const mongoose = require('mongoose');
 
-const db_path = 'mongodb://localhost/dbadmsys';
+const db_path = process.env.MongoURI || 'mongodb://localhost/dbadmsys';
 const config = {
     useNewUrlParser: true,
     useUnifiedTopology: true
