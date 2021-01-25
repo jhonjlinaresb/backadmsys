@@ -13,3 +13,13 @@
 
 Use Postman for request:
 [![Server Online](https://i.gyazo.com/84c37f2876870349993b53947c85686f.gif)](https://gyazo.com/84c37f2876870349993b53947c85686f)
+
+## Endpoints
+
+- Register User (POST):
+>/users/register
+>[![Register User](https://i.gyazo.com/852fa82abcec3273bd3e1ea0051ae32e.gif)](https://gyazo.com/852fa82abcec3273bd3e1ea0051ae32e)
+>Register Admin User:
+>[![Image from Gyazo](https://i.gyazo.com/8421f0fc43b16a368d5689ed211cad43.gif)](https://gyazo.com/8421f0fc43b16a368d5689ed211cad43)
+- Login User:
+>/users/login
