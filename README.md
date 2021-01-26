@@ -21,5 +21,7 @@ Use Postman for request:
 >[![Register User](https://i.gyazo.com/852fa82abcec3273bd3e1ea0051ae32e.gif)](https://gyazo.com/852fa82abcec3273bd3e1ea0051ae32e)
 >Register Admin User:
 >[![Image from Gyazo](https://i.gyazo.com/8421f0fc43b16a368d5689ed211cad43.gif)](https://gyazo.com/8421f0fc43b16a368d5689ed211cad43)
-- Login User:
+
+- Login User (POST):
 >/users/login
+>[![Image from Gyazo](https://i.gyazo.com/8ab9d2c347e91a1fe7e1cb2aa294495d.gif)](https://gyazo.com/8ab9d2c347e91a1fe7e1cb2aa294495d)
