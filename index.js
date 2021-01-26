@@ -3,14 +3,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors=require('./middleware/cors');
 
-const {showUsers, logoutUser} = require('./db/users');
-const {showUsersId} = require('./db/users');
-const {registerUser} = require('./db/users');
-const {deleteUser} = require('./db/users');
-const {modifyUser} = require('./db/users');
-const {loginUser} = require('./db/users');
-const {userTickets, adduserTicket, showTickets, deleteOne} = require('./db/tickets');
-const {computers, addComputer, deleteComputer, showInventory} = require('./db/inventory');
+const {showUsers, logoutUser} = require('./controllers/usersController');
+const {showUsersId} = require('./controllers/usersController');
+const {registerUser} = require('./controllers/usersController');
+const {deleteUser} = require('./controllers/usersController');
+const {modifyUser} = require('./controllers/usersController');
+const {loginUser} = require('./controllers/usersController');
+const {userTickets, adduserTicket, showTickets, deleteOne} = require('./controllers/ticketsController');
+const {computers, addComputer, deleteComputer, showInventory} = require('./controllers/inventoryController');
 
 // Llamar conexión
 const dbconnect = require('./config/dbconnect');

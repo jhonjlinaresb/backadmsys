@@ -25,3 +25,18 @@ Use Postman for request:
 - Login User (POST):
 >/users/login
 >[![Image from Gyazo](https://i.gyazo.com/8ab9d2c347e91a1fe7e1cb2aa294495d.gif)](https://gyazo.com/8ab9d2c347e91a1fe7e1cb2aa294495d)
+
+- View User (GET):
+> /users/id/:userId
+> Params: userId
+- Logout User (POST):
+> /users/logout
+> [![Image from Gyazo](https://i.gyazo.com/8ea04bf1fb9133752517cb1562342d19.gif)](https://gyazo.com/8ea04bf1fb9133752517cb1562342d19)
+> Body: email.
+> 
+- View Users (GET):
+> /users/showAll
+> [![Image from Gyazo](https://i.gyazo.com/124028caa17701978fb447513c5c8254.gif)](https://gyazo.com/124028caa17701978fb447513c5c8254)
+
+- Create Tickets (POST):
+> /users/:dni/tickets
