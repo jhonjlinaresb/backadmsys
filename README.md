@@ -1,7 +1,7 @@
 # Welcome to APP AdmSys Backend
 ### Deploy to Heroku [BackAdmSys](https://backadmsys.herokuapp.com/).
 
-AdmSys is an application for system administration, the backend was developed to create users, log in with token, create tickets for support cases in the IT department. The option to create an inventory of computer equipment and have everything in order within the organisation at a technological level. Easy to manage in the area of user support and computer equipment.
+AdmSys is an application for system administration, the backend was developed to create, read, update and delete users, log in with token, create and delete tickets for support cases in the IT department. The option to create, read, update, delete of an inventory of computer equipment and have everything in order within the organisation at a technological level. Easy to manage in the area of user support and computer equipment.
 
  The Backend of  App **Admsys** is created with love & uses technologies such as:
  - NodeJS.
