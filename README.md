@@ -35,7 +35,7 @@ Use Postman for request:
 > [![Logout](https://i.gyazo.com/8ea04bf1fb9133752517cb1562342d19.gif)](https://gyazo.com/8ea04bf1fb9133752517cb1562342d19)
 > Body: email.
 > 
-- View Users (GET):
+- View All Users (GET):
 > /users/showAll
 > [![View Users](https://i.gyazo.com/124028caa17701978fb447513c5c8254.gif)](https://gyazo.com/124028caa17701978fb447513c5c8254)
 
