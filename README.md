@@ -41,11 +41,15 @@ Use Postman for request:
 
 - Create Tickets (POST):
 > /users/:dni/tickets
-
 > Params: DNI.
 > [![create tickets](https://i.gyazo.com/c40d141f27b1fbe04ef54a906498b6b7.gif)](https://gyazo.com/c40d141f27b1fbe04ef54a906498b6b7)
 
 - View Tickets (GET):
 >/users/:dni/tickets
 >Params: DNI.
->[![Image from Gyazo](https://i.gyazo.com/366db15391950be81ab7fe39cfc3184a.gif)](https://gyazo.com/366db15391950be81ab7fe39cfc3184a)
+>[![TicketsByDNI](https://i.gyazo.com/366db15391950be81ab7fe39cfc3184a.gif)](https://gyazo.com/366db15391950be81ab7fe39cfc3184a)
+
+-View All Tickets (GET):
+>View all tickets created for users.
+>/users/tickets
+>[![All-Tickets](https://i.gyazo.com/5e095846d0392f6612856a3e447b428e.gif)](https://gyazo.com/5e095846d0392f6612856a3e447b428e)
