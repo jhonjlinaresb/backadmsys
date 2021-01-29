@@ -53,3 +53,9 @@ Use Postman for request:
 >View all tickets created for users.
 >/users/tickets
 >[![All-Tickets](https://i.gyazo.com/5e095846d0392f6612856a3e447b428e.gif)](https://gyazo.com/5e095846d0392f6612856a3e447b428e)
+
+- Create Inventory (POST):
+>/:user/inventory
+>Params: User assigned equipment, Example: SEO
+[![Send Info Inventory](https://i.gyazo.com/212f1bdd15a661c7845d328c552c72e9.gif)](https://gyazo.com/212f1bdd15a661c7845d328c552c72e9)
+[![View Req](https://i.gyazo.com/8e9d10d54c4762e3c79226ce9f0cf962.gif)](https://gyazo.com/8e9d10d54c4762e3c79226ce9f0cf962)
