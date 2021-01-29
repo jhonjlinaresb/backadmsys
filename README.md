@@ -56,6 +56,6 @@ Use Postman for request:
 
 - Create Inventory (POST):
 >/:user/inventory
->Params: User assigned equipment, Example: SEO
+>Params and Body of JSON: User assigned equipment, Example: SEO
 [![Send Info Inventory](https://i.gyazo.com/212f1bdd15a661c7845d328c552c72e9.gif)](https://gyazo.com/212f1bdd15a661c7845d328c552c72e9)
 [![View Req](https://i.gyazo.com/8e9d10d54c4762e3c79226ce9f0cf962.gif)](https://gyazo.com/8e9d10d54c4762e3c79226ce9f0cf962)
