@@ -44,3 +44,8 @@ Use Postman for request:
 
 > Params: DNI.
 > [![create tickets](https://i.gyazo.com/c40d141f27b1fbe04ef54a906498b6b7.gif)](https://gyazo.com/c40d141f27b1fbe04ef54a906498b6b7)
+
+- View Tickets (GET):
+>/users/:dni/tickets
+>Params: DNI.
+>[![Image from Gyazo](https://i.gyazo.com/366db15391950be81ab7fe39cfc3184a.gif)](https://gyazo.com/366db15391950be81ab7fe39cfc3184a)
